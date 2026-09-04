@@ -33,7 +33,7 @@
   },
   "packageRules": [
     {
-      "description": "devDependencies no-major: agrupadas y automerge",
+      "description": ["devDependencies no-major: agrupadas y automerge"],      
       "matchDepTypes": [
         "devDependencies"
       ],
@@ -44,7 +44,7 @@
       "automerge": true
     },
     {
-      "description": "Patch, pin y digest: automerge",
+      "description": ["Patch, pin y digest: automerge"],
       "matchUpdateTypes": [
         "patch",
         "pin",
@@ -53,7 +53,7 @@
       "automerge": true
     },
     {
-      "description": "Majors: solo tras aprobarlas en el Dependency Dashboard",
+      "description": ["Majors: solo tras aprobarlas en el Dependency Dashboard"],
       "matchUpdateTypes": [
         "major"
       ],
