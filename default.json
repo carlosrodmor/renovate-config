@@ -36,10 +36,21 @@
       "automergeType": "branch"
     },
     {
-      "description": ["Majors: nada se abre hasta que lo apruebes en el Dependency Dashboard"],
-      "matchUpdateTypes": ["major"],
+      "description": ["Majors y reemplazos de paquete: nada se abre hasta aprobarlo en el Dependency Dashboard"],
+      "matchUpdateTypes": ["major", "replacement"],
       "automerge": false,
       "dependencyDashboardApproval": true
+    },
+    {
+      "description": ["zone.js solo se mueve cuando se mueve Angular: cada version de @angular/core fija un peer distinto (~0.14 en v18, ~0.15 en v19) y el bump suelto rompe el package-lock con ERESOLVE. Se permiten patches."],
+      "matchPackageNames": ["zone.js"],
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": false
+    },
+    {
+      "description": ["eslint-plugin-react-refresh 0.5+ exige ESLint 9 o 10; retenido hasta migrar Portfolio a flat config"],
+      "matchPackageNames": ["eslint-plugin-react-refresh"],
+      "allowedVersions": "<0.5.0"
     }
   ]
 }
